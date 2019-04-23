@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.example.item.ItemCategory;
 import com.squareup.picasso.Picasso;
-import com.navin.threeVio.R;
+import com.navin.threevio.R;
 
 import java.util.ArrayList;
 

@@ -5,7 +5,7 @@ import android.widget.Toast;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
-import com.navin.threeVio.R;
+import com.navin.threevio.R;
 
 public abstract class YouTubeFailureRecoveryActivity extends YouTubeBaseActivity implements
     YouTubePlayer.OnInitializedListener {

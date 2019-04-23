@@ -5,17 +5,11 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
-import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
-import android.widget.LinearLayout;
 
 
-import com.google.ads.mediation.admob.AdMobAdapter;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
-import com.navin.threeVio.R;
+import com.navin.threevio.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
@@ -102,7 +96,7 @@ public class JsonUtils {
         }
     }
 
-    public static void showPersonalizedAds(LinearLayout adLayout, Activity activity) {
+  /*  public static void showPersonalizedAds(LinearLayout adLayout, Activity activity) {
 
         if (Constant.SAVE_ADS_BANNER_ON_OFF.equals("true")) {
             AdView mAdView = new AdView(activity);
@@ -135,7 +129,7 @@ public class JsonUtils {
         } else {
             adLayout.setVisibility(View.GONE);
         }
-    }
+    }*/
 
     public static String Format(Integer number){
         String[] suffix = new String[]{"k","m","b","t"};

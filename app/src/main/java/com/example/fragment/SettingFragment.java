@@ -15,10 +15,10 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 
 import com.onesignal.OneSignal;
-import com.navin.threeVio.ActivityAboutUs;
-import com.navin.threeVio.ActivityPrivacy;
-import com.navin.threeVio.MyApplication;
-import com.navin.threeVio.R;
+import com.navin.threevio.ActivityAboutUs;
+import com.navin.threevio.ActivityPrivacy;
+import com.navin.threevio.MyApplication;
+import com.navin.threevio.R;
 
 
 public class SettingFragment extends Fragment {

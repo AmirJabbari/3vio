@@ -24,12 +24,9 @@ import com.example.util.Constant;
 import com.example.util.ItemOffsetDecoration;
 import com.example.util.JsonUtils;
 import com.example.util.RecyclerTouchListener;
-import com.google.ads.mediation.admob.AdMobAdapter;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-import com.navin.threeVio.MainActivity;
-import com.navin.threeVio.R;
+
+import com.navin.threevio.MainActivity;
+import com.navin.threevio.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -46,7 +43,7 @@ public class CategoryFragment extends Fragment {
     private ProgressBar progressBar;
     private FragmentManager fragmentManager;
     ItemCategory itemCategory;
-    private InterstitialAd mInterstitial;
+  //  private InterstitialAd mInterstitial;
     private int AD_COUNT = 0;
     AppCompatTextView txt;
     ConnectionDetector cd;
@@ -93,7 +90,7 @@ public class CategoryFragment extends Fragment {
                 if (Constant.SAVE_ADS_FULL_ON_OFF.equals("true")) {
                     AD_COUNT++;
                     if (AD_COUNT == Integer.parseInt(Constant.SAVE_ADS_CLICK)) {
-                        AD_COUNT = 0;
+                  /*      AD_COUNT = 0;
                         mInterstitial = new InterstitialAd(requireActivity());
                         mInterstitial.setAdUnitId(Constant.SAVE_ADS_FULL_ID);
                         AdRequest adRequest;
@@ -138,7 +135,7 @@ public class CategoryFragment extends Fragment {
                                 fragmentTransaction.commit();
                                 ((MainActivity) requireActivity()).setToolbarTitle(Constant.CATEGORY_TITLEE);
                             }
-                        });
+                        });*/
                     } else {
                         CategoryListFragment categoryListFragment = new CategoryListFragment();
                         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

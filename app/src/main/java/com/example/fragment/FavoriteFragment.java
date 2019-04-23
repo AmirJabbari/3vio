@@ -15,7 +15,7 @@ import com.example.adapter.AllVideoAdapter;
 import com.example.favorite.DatabaseHelper;
 import com.example.item.ItemLatest;
 import com.example.util.ItemOffsetDecoration;
-import com.navin.threeVio.R;
+import com.navin.threevio.R;
 
 import java.util.ArrayList;
 

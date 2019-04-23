@@ -1,4 +1,4 @@
-package com.navin.threeVio;
+package com.navin.threevio;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

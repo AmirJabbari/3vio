@@ -1,7 +1,7 @@
 package com.example.util;
 
 
-import com.navin.threeVio.BuildConfig;
+import com.navin.threevio.BuildConfig;
 
 import java.io.Serializable;
 

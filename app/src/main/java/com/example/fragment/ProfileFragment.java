@@ -26,9 +26,9 @@ import com.mobsandgeeks.saripaar.annotation.Email;
 import com.mobsandgeeks.saripaar.annotation.Length;
 import com.mobsandgeeks.saripaar.annotation.NotEmpty;
 import com.mobsandgeeks.saripaar.annotation.Password;
-import com.navin.threeVio.MainActivity;
-import com.navin.threeVio.MyApplication;
-import com.navin.threeVio.R;
+import com.navin.threevio.MainActivity;
+import com.navin.threevio.MyApplication;
+import com.navin.threevio.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

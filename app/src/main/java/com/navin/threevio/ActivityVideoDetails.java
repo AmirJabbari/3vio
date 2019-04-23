@@ -1,4 +1,4 @@
-package com.navin.threeVio;
+package com.navin.threevio;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,6 +38,11 @@ import com.example.util.JsonUtils;
 import com.example.vimeo.Vimeo;
 import com.example.vimeo.VimeoNoPip;
 import com.example.youtube.YoutubePlay;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -68,6 +74,7 @@ public class ActivityVideoDetails extends AppCompatActivity {
     RecyclerView recyclerViewRelatedVideo, recyclerViewCommentVideo;
     MyApplication myApplication;
     LinearLayout lay_detail;
+     AdView mAdView;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -79,6 +86,13 @@ public class ActivityVideoDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_detail);
         toolbar = findViewById(R.id.toolbar);
+        //////////////////////////////////
+        MobileAds.initialize(this, "ca-app-pub-4917820623973019~7771271244");
+        AdView adView = new AdView(this);
+        adView.setAdSize(AdSize.BANNER);
+        adView.setAdUnitId("ca-app-pub-4917820623973019/8509637843");
+
+        ///////////////////////////////
         toolbar.setTitle(getString(R.string.app_name));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -125,7 +139,7 @@ public class ActivityVideoDetails extends AppCompatActivity {
 
         Intent intent = getIntent();
         isWhichScreenNotification = intent.getBooleanExtra("isNotification", false);
-        if (!isWhichScreenNotification) {
+       /* if (!isWhichScreenNotification) {
             if (JsonUtils.personalization_ad) {
                 JsonUtils.showPersonalizedAds(adLayout, ActivityVideoDetails.this);
             } else {
@@ -133,12 +147,67 @@ public class ActivityVideoDetails extends AppCompatActivity {
             }
 
         }
-
+*/
 
         if (JsonUtils.isNetworkAvailable(ActivityVideoDetails.this)) {
             new getVideoDetail().execute(Constant.SINGLE_VIDEO_URL + Constant.LATEST_IDD);
         }
+        ////////////////////////////////////////////////
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+                //Toast.makeText(getApplicationContext(),"sucees load",Toast.LENGTH_LONG).show();
+                Log.e("","");
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                // Code to be executed when an ad request fails.
+                Log.e("","");
+
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+                Log.e("","");
+
+            }
+
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+                Log.e("","");
+
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                // Code to be executed when the user has left the app.
+                Log.e("","");
+
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+                Log.e("","");
+
+            }
+        });
+        ///////////////////////////////////////////////////
+
     }
+
+
+
 
     @SuppressLint("StaticFieldLeak")
     private class getVideoDetail extends AsyncTask<String, Void, String> {

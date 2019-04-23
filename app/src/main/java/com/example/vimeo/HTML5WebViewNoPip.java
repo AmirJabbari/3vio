@@ -19,7 +19,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 
-import com.navin.threeVio.R;
+import com.navin.threevio.R;
 
 public class HTML5WebViewNoPip extends WebView {
 	

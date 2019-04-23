@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.halilibo.bettervideoplayer.BetterVideoPlayer;
-import com.navin.threeVio.R;
+import com.navin.threevio.R;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 

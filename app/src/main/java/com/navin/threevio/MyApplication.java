@@ -1,10 +1,11 @@
-package com.navin.threeVio;
+package com.navin.threevio;
 
 import android.app.Application;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.net.Uri;
+import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
 import com.example.util.AnalyticsTrackers;
@@ -16,7 +17,7 @@ import org.json.JSONObject;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
-public class MyApplication extends Application {
+public class MyApplication extends MultiDexApplication {
     private static MyApplication mInstance;
     public SharedPreferences preferences;
     public String prefName = "LiveTV";
@@ -39,7 +40,7 @@ public class MyApplication extends Application {
                 .init();
         mInstance = this;
         AnalyticsTrackers.initialize(this);
-        AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP);
+      //  AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP);
     }
 
 

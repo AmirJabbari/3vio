@@ -39,13 +39,10 @@ import com.example.util.EnchantedViewPager;
 import com.example.util.ItemOffsetDecoration;
 import com.example.util.JsonUtils;
 import com.example.util.RecyclerTouchListener;
-import com.google.ads.mediation.admob.AdMobAdapter;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
+
 import com.squareup.picasso.Picasso;
-import com.navin.threeVio.MainActivity;
-import com.navin.threeVio.R;
+import com.navin.threevio.MainActivity;
+import com.navin.threevio.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -73,7 +70,7 @@ public class HomeFragment extends Fragment {
     HomeLatestAdapter homeLatestAdapter;
     HomeAllAdapter homeAllAdapter;
     private FragmentManager fragmentManager;
-    private InterstitialAd mInterstitial;
+//    private InterstitialAd mInterstitial;
     private int AD_COUNT = 0;
     ItemCategory itemCategory;
     TextView txt_latest_video_no, txt_all_video_no, txt_cat_video_no;
@@ -476,7 +473,7 @@ public class HomeFragment extends Fragment {
                     AD_COUNT++;
                     if (AD_COUNT == Integer.parseInt(Constant.SAVE_ADS_CLICK)) {
                         AD_COUNT = 0;
-                        mInterstitial = new InterstitialAd(requireActivity());
+                      /*  mInterstitial = new InterstitialAd(requireActivity());
                         mInterstitial.setAdUnitId(Constant.SAVE_ADS_FULL_ID);
                         AdRequest adRequest;
                         if (JsonUtils.personalization_ad) {
@@ -520,7 +517,7 @@ public class HomeFragment extends Fragment {
                                 fragmentTransaction.commit();
                                 ((MainActivity) requireActivity()).setToolbarTitle(Constant.CATEGORY_TITLEE);
                             }
-                        });
+                        });*/
                     } else {
                         CategoryListFragment categoryListFragment = new CategoryListFragment();
                         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

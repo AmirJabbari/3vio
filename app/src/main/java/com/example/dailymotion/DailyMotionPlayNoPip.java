@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
-import com.navin.threeVio.R;
+import com.navin.threevio.R;
 
 public class DailyMotionPlayNoPip extends Activity {
 

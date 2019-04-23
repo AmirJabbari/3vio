@@ -19,8 +19,8 @@ import com.example.item.ItemLatest;
 import com.example.util.Constant;
 import com.example.util.ItemOffsetDecoration;
 import com.example.util.JsonUtils;
-import com.navin.threeVio.MainActivity;
-import com.navin.threeVio.R;
+import com.navin.threevio.MainActivity;
+import com.navin.threevio.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

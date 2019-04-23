@@ -7,7 +7,7 @@ import android.view.Window;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayer.Provider;
 import com.google.android.youtube.player.YouTubePlayerView;
-import com.navin.threeVio.R;
+import com.navin.threevio.R;
 
 public class YoutubePlay extends YouTubeFailureRecoveryActivity {
 

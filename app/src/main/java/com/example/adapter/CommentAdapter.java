@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.item.ItemComment;
-import com.navin.threeVio.R;
+import com.navin.threevio.R;
 
 import java.util.ArrayList;
 

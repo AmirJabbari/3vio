@@ -22,7 +22,7 @@ import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.VideoView;
 
-import com.navin.threeVio.R;
+import com.navin.threevio.R;
 
 public class DMWebVideoView extends WebView {
 

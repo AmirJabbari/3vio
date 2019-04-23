@@ -3,7 +3,6 @@ package com.example.adapter;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -20,13 +19,10 @@ import com.example.favorite.DatabaseHelper;
 import com.example.item.ItemLatest;
 import com.example.util.Constant;
 import com.example.util.JsonUtils;
-import com.google.ads.mediation.admob.AdMobAdapter;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
+
 import com.squareup.picasso.Picasso;
-import com.navin.threeVio.ActivityVideoDetails;
-import com.navin.threeVio.R;
+import com.navin.threevio.ActivityVideoDetails;
+import com.navin.threevio.R;
 
 import java.util.ArrayList;
 
@@ -35,7 +31,7 @@ public class HomeLatestAdapter extends RecyclerView.Adapter<HomeLatestAdapter.It
 
     private ArrayList<ItemLatest> dataList;
     private Context mContext;
-    private InterstitialAd mInterstitial;
+ //   private InterstitialAd mInterstitial;
     private int AD_COUNT = 0;
     private DatabaseHelper databaseHelper;
 
@@ -83,7 +79,7 @@ public class HomeLatestAdapter extends RecyclerView.Adapter<HomeLatestAdapter.It
             public void onClick(View v) {
                 Constant.LATEST_IDD = singleItem.getLatestId();
 
-                if (Constant.SAVE_ADS_FULL_ON_OFF.equals("true")) {
+              /*  if (Constant.SAVE_ADS_FULL_ON_OFF.equals("true")) {
                     AD_COUNT++;
                     if (AD_COUNT == Integer.parseInt(Constant.SAVE_ADS_CLICK)) {
                         AD_COUNT = 0;
@@ -126,10 +122,10 @@ public class HomeLatestAdapter extends RecyclerView.Adapter<HomeLatestAdapter.It
                         Intent intent_single = new Intent(mContext, ActivityVideoDetails.class);
                         mContext.startActivity(intent_single);
                     }
-                } else {
+                } else {*/
                     Intent intent_single = new Intent(mContext, ActivityVideoDetails.class);
                     mContext.startActivity(intent_single);
-                }
+          //     }
 
             }
         });

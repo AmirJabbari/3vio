@@ -18,10 +18,9 @@ import com.example.favorite.DatabaseHelper;
 import com.example.item.ItemLatest;
 import com.example.util.Constant;
 import com.example.util.JsonUtils;
-import com.google.android.gms.ads.InterstitialAd;
 import com.squareup.picasso.Picasso;
-import com.navin.threeVio.ActivityVideoDetails;
-import com.navin.threeVio.R;
+import com.navin.threevio.ActivityVideoDetails;
+import com.navin.threevio.R;
 
 import java.util.ArrayList;
 
@@ -30,7 +29,7 @@ public class RelatedAdapter extends RecyclerView.Adapter<RelatedAdapter.ItemRowH
 
     private ArrayList<ItemLatest> dataList;
     private Context mContext;
-    private InterstitialAd mInterstitial;
+    //private InterstitialAd mInterstitial;
     private int AD_COUNT = 0;
     private DatabaseHelper databaseHelper;
 
@@ -82,54 +81,54 @@ public class RelatedAdapter extends RecyclerView.Adapter<RelatedAdapter.ItemRowH
                 intent_single.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 mContext.startActivity(intent_single);
 
-//                if (Constant.SAVE_ADS_FULL_ON_OFF.equals("true")) {
-//                    AD_COUNT++;
-//                    if (AD_COUNT == Integer.parseInt(Constant.SAVE_ADS_CLICK)) {
-//                        AD_COUNT = 0;
-//                        mInterstitial = new InterstitialAd(mContext);
-//                        mInterstitial.setAdUnitId(Constant.SAVE_ADS_FULL_ID);
-//                        AdRequest adRequest;
-//                        if (JsonUtils.personalization_ad) {
-//                            adRequest = new AdRequest.Builder()
-//                                    .build();
-//                        } else {
-//                            Bundle extras = new Bundle();
-//                            extras.putString("npa", "1");
-//                            adRequest = new AdRequest.Builder()
-//                                    .addNetworkExtrasBundle(AdMobAdapter.class, extras)
-//                                    .build();
-//                        }
-//                        mInterstitial.loadAd(adRequest);
-//                        mInterstitial.setAdListener(new AdListener() {
-//                            @Override
-//                            public void onAdLoaded() {
-//                                // TODO Auto-generated method stub
-//                                super.onAdLoaded();
-//                                if (mInterstitial.isLoaded()) {
-//                                    mInterstitial.show();
-//                                }
-//                            }
-//
-//                            public void onAdClosed() {
-//                                Intent intent_single = new Intent(mContext, ActivityVideoDetails.class);
-//                                mContext.startActivity(intent_single);
-//
-//                            }
-//
-//                            @Override
-//                            public void onAdFailedToLoad(int errorCode) {
-//                                Intent intent_single = new Intent(mContext, ActivityVideoDetails.class);
-//                                mContext.startActivity(intent_single);
-//                            }
-//                        });
-//                    } else {
-//                        Intent intent_single = new Intent(mContext, ActivityVideoDetails.class);
-//                        mContext.startActivity(intent_single);
-//                    }
-//                } else {
-//                    Intent intent_single = new Intent(mContext, ActivityVideoDetails.class);
-//                    mContext.startActivity(intent_single);
-//                }
+              /*  if (Constant.SAVE_ADS_FULL_ON_OFF.equals("true")) {
+                    AD_COUNT++;
+                    if (AD_COUNT == Integer.parseInt(Constant.SAVE_ADS_CLICK)) {
+                     AD_COUNT = 0;
+                        mInterstitial = new InterstitialAd(mContext);
+                        mInterstitial.setAdUnitId(Constant.SAVE_ADS_FULL_ID);
+                        AdRequest adRequest;
+                        if (JsonUtils.personalization_ad) {
+                            adRequest = new AdRequest.Builder()
+                                    .build();
+                        } else {
+                            Bundle extras = new Bundle();
+                            extras.putString("npa", "1");
+                            adRequest = new AdRequest.Builder()
+                                    .addNetworkExtrasBundle(AdMobAdapter.class, extras)
+                                    .build();
+                        }
+                      mInterstitial.loadAd(adRequest);
+                       mInterstitial.setAdListener(new AdListener() {
+                            @Override
+                           public void onAdLoaded() {
+                                // TODO Auto-generated method stub
+                                super.onAdLoaded();
+                                if (mInterstitial.isLoaded()) {
+                                    mInterstitial.show();
+                                }
+                            }
+
+                            public void onAdClosed() {
+                                Intent intent_single = new Intent(mContext, ActivityVideoDetails.class);
+                                mContext.startActivity(intent_single);
+
+                            }
+
+                            @Override
+                            public void onAdFailedToLoad(int errorCode) {
+                               Intent intent_single = new Intent(mContext, ActivityVideoDetails.class);
+                                mContext.startActivity(intent_single);
+                            }
+                        });
+                   } else {
+                       Intent intent_single = new Intent(mContext, ActivityVideoDetails.class);
+                        mContext.startActivity(intent_single);
+                    }
+                } else {*/
+                   // Intent intent_single = new Intent(mContext, ActivityVideoDetails.class);
+                    //mContext.startActivity(intent_single);
+              //  }
 
             }
         });

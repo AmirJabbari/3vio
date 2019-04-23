@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
-import com.navin.threeVio.R;
+import com.navin.threevio.R;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class DailyMotionPlay extends Activity {

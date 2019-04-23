@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.navin.threeVio">
+    package="com.navin.threevio">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
-        android:name="com.navin.threeVio.MyApplication"
+        android:name="com.navin.threevio.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/app_icon"
         android:label="@string/app_name"
@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.navin.threeVio.SplashActivity"
+            android:name="com.navin.threevio.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,33 +24,33 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.navin.threeVio.MainActivity"
+            android:name="com.navin.threevio.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
-            android:name="com.navin.threeVio.ActivityVideoDetails"
+            android:name="com.navin.threevio.ActivityVideoDetails"
             android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
-            android:name="com.navin.threeVio.ActivitySearch"
+            android:name="com.navin.threevio.ActivitySearch"
             android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
-            android:name="com.navin.threeVio.ActivityForgot"
+            android:name="com.navin.threevio.ActivityForgot"
             android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
-            android:name="com.navin.threeVio.ActivityPrivacy"
+            android:name="com.navin.threevio.ActivityPrivacy"
             android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
-            android:name="com.navin.threeVio.ActivityAboutUs"
+            android:name="com.navin.threevio.ActivityAboutUs"
             android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
-            android:name="com.navin.threeVio.ActivityComment"
+            android:name="com.navin.threevio.ActivityComment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/ThemeSwipeBack" />
         <activity
-            android:name="com.navin.threeVio.ActivitySignUp"
+            android:name="com.navin.threevio.ActivitySignUp"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.navin.threeVio.ActivitySignIn"
+            android:name="com.navin.threevio.ActivitySignIn"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="adjustPan" />
         <activity
@@ -96,7 +96,7 @@
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:theme="@android:style/Theme.Black.NoTitleBar" />
         <!-- analytic -->
-        <receiver
+      <!--  <receiver
             android:name="com.google.android.gms.analytics.AnalyticsReceiver"
             android:enabled="true">
             <intent-filter>
@@ -117,10 +117,14 @@
             </intent-filter>
         </receiver>
 
-        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />-->
         <!-- analytic -->
         <meta-data android:name="com.onesignal.NotificationOpened.DEFAULT" android:value="DISABLE" />
         <meta-data android:name="com.onesignal.NotificationAccentColor.DEFAULT" android:value="FFff0083" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4917820623973019~7771271244"/>
+
     </application>
 
 </manifest>

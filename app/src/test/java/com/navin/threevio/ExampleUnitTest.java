@@ -1,4 +1,4 @@
-package com.navin.threeVio;
+package com.navin.threevio;
 
 import org.junit.Test;
 

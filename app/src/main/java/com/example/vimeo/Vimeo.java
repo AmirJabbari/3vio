@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebSettings.PluginState;
 
-import com.navin.threeVio.R;
+import com.navin.threevio.R;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class Vimeo extends Activity {

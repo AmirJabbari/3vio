@@ -8,7 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebSettings.PluginState;
 
-import com.navin.threeVio.R;
+import com.navin.threevio.R;
 
 public class VimeoNoPip extends Activity {
 	private final String TAG = "MainActivity";

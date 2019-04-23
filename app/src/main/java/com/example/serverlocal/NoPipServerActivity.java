@@ -12,7 +12,7 @@ import android.view.View;
 
 import com.example.util.JsonUtils;
 import com.halilibo.bettervideoplayer.BetterVideoPlayer;
-import com.navin.threeVio.R;
+import com.navin.threevio.R;
 
 
 public class NoPipServerActivity extends AppCompatActivity {
