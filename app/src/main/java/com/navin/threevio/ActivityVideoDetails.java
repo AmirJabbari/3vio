@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,11 +26,14 @@ import android.widget.Toast;
 
 import com.example.adapter.CommentAdapter;
 import com.example.adapter.RelatedAdapter;
+import com.example.config.AppConfig;
 import com.example.dailymotion.DailyMotionPlay;
 import com.example.dailymotion.DailyMotionPlayNoPip;
 import com.example.favorite.DatabaseHelper;
 import com.example.item.ItemComment;
 import com.example.item.ItemLatest;
+import com.example.model.Ads;
+import com.example.model.IMessageListener;
 import com.example.serverlocal.NoPipServerActivity;
 import com.example.serverlocal.PipServerActivity;
 import com.example.util.Constant;
@@ -37,6 +41,7 @@ import com.example.util.ItemOffsetDecoration;
 import com.example.util.JsonUtils;
 import com.example.vimeo.Vimeo;
 import com.example.vimeo.VimeoNoPip;
+import com.example.webservice.WebServiceCaller;
 import com.example.youtube.YoutubePlay;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -49,7 +54,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -75,6 +84,11 @@ public class ActivityVideoDetails extends AppCompatActivity {
     MyApplication myApplication;
     LinearLayout lay_detail;
      AdView mAdView;
+    WebServiceCaller webServiceCaller;
+     Calendar calendar;
+    SimpleDateFormat dateFormat;
+     Date date;
+     String datee;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -86,6 +100,8 @@ public class ActivityVideoDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_detail);
         toolbar = findViewById(R.id.toolbar);
+        webServiceCaller= new WebServiceCaller(getApplicationContext());
+
         //////////////////////////////////
         MobileAds.initialize(this, "ca-app-pub-4917820623973019~7771271244");
         AdView adView = new AdView(this);
@@ -178,12 +194,15 @@ public class ActivityVideoDetails extends AppCompatActivity {
                 // covers the screen.
                 Log.e("","");
 
+
+
             }
 
             @Override
             public void onAdClicked() {
                 // Code to be executed when the user clicks on an ad.
                 Log.e("","");
+                register();
 
             }
 
@@ -203,6 +222,32 @@ public class ActivityVideoDetails extends AppCompatActivity {
             }
         });
         ///////////////////////////////////////////////////
+
+    }
+
+    public void register(){
+
+        date=new Date();
+        datee=Long.toString(date.getTime());
+        AppConfig appConfig=new AppConfig(getApplicationContext());
+
+
+        try {
+            webServiceCaller.register(new IMessageListener() {
+                @Override
+                public void onSuccess(List<Ads> AdsList) {
+
+
+                }
+
+                @Override
+                public void onError(String errorResponse) {
+
+                }
+            },"3vio",appConfig.getUser(),datee);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 

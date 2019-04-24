@@ -89,7 +89,7 @@
 
     <!-- youtube -->
     <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
-    <string name="youtube_api_key">AIzaSyAYJwy6nzCFqgr5LtihRI3YuVBb_34aprw</string>
+    <string name="youtube_api_key">AIzaSyCA6RLxE5Bb1tSNUYWi2IDbMTi_e1EaCaY</string>
 
     <!--if you want rtl change value of isRTL to true else false-->
     <string name="isRTL">false</string>

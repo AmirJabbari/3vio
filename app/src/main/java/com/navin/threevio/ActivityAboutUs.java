@@ -42,7 +42,6 @@ public class ActivityAboutUs extends AppCompatActivity {
     WebView webView;
     Toolbar toolbar;
     JsonUtils jsonUtils;
-    AppCompatButton button;
     ConnectionDetector cd;
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -74,18 +73,8 @@ public class ActivityAboutUs extends AppCompatActivity {
         webSettings.setDefaultFontSize(14);
         mScrollView = findViewById(R.id.scrollView);
         mProgressBar = findViewById(R.id.progressBar);
-        button = findViewById(R.id.btn_check);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (cd.isConnected()){
-                    Toast.makeText(getApplicationContext(),"Connect",Toast.LENGTH_LONG).show();
-                }
-                else
-                    Toast.makeText(getApplicationContext(),"NO Connect",Toast.LENGTH_LONG).show();
+      //  button = findViewById(R.id.btn_check);
 
-            }
-        });
         mListItem = new ArrayList<>();
 
         if (JsonUtils.isNetworkAvailable(ActivityAboutUs.this)) {

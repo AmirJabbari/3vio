@@ -53,7 +53,7 @@ public class AllVideoFragment extends Fragment {
         cd = new ConnectionDetector(getActivity());
 
         if(cd.isConnected()){
-            Toast.makeText(getActivity(),"Connected",Toast.LENGTH_LONG).show();
+            //Toast.makeText(getActivity(),"Connected",Toast.LENGTH_LONG).show();
             txtNetwork.setVisibility(View.GONE);
             Log.e("Connect","Connect");
         }

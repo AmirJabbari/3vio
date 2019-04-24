@@ -69,7 +69,7 @@ public class CategoryFragment extends Fragment {
         cd=new ConnectionDetector(getActivity());
 
         if(cd.isConnected()){
-            Toast.makeText(getActivity(),"Connected",Toast.LENGTH_LONG).show();
+        //    Toast.makeText(getActivity(),"Connected",Toast.LENGTH_LONG).show();
             Log.e("Connect","Connect");
         }
         else {

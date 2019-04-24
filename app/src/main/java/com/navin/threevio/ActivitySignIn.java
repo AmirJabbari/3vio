@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.example.config.AppConfig;
 import com.example.util.Constant;
 import com.example.util.JsonUtils;
 import com.mobsandgeeks.saripaar.ValidationError;
@@ -52,7 +53,8 @@ public class ActivitySignIn extends AppCompatActivity implements Validator.Valid
     boolean iswhichscreen;
     String videoiddetail;
     JsonUtils jsonUtils;
-
+    AppConfig appConfig;
+    String email;
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
@@ -68,7 +70,9 @@ public class ActivitySignIn extends AppCompatActivity implements Validator.Valid
         pDialog = new ProgressDialog(this);
         jsonUtils = new JsonUtils(this);
         jsonUtils.forceRTLIfSupported(getWindow());
-
+        ////////////////////////////////
+        appConfig=new AppConfig(getApplicationContext());
+        //////////////////////////
         lay_sign = findViewById(R.id.lay_sign);
         button_sign_up = findViewById(R.id.button_sign_up);
         lay_forgot = findViewById(R.id.lay_forgot);
@@ -121,6 +125,8 @@ public class ActivitySignIn extends AppCompatActivity implements Validator.Valid
             @Override
             public void onClick(View v) {
                 validator.validate();
+                email=edtEmail.getText().toString();
+                appConfig.saveData(email);
             }
         });
 

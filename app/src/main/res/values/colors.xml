@@ -14,6 +14,7 @@
     <color name="navigation_bottom_default">#A7A1A1</color>
     <color name="navigation_bottom_checked">#e91d5e</color>
     <color name="toolbar">#e91d5e</color>
+    <color name="backColor">#e91d5e</color>
 
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>

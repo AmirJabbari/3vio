@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.example.config.AppConfig;
 import com.example.util.Constant;
 import com.example.util.JsonUtils;
 import com.mobsandgeeks.saripaar.ValidationError;
@@ -49,6 +51,7 @@ public class ActivitySignUp extends AppCompatActivity implements Validator.Valid
     ProgressDialog pDialog;
     JsonUtils jsonUtils;
 
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
@@ -62,7 +65,8 @@ public class ActivitySignUp extends AppCompatActivity implements Validator.Valid
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         jsonUtils = new JsonUtils(this);
         jsonUtils.forceRTLIfSupported(getWindow());
-
+        /////////////////////
+        ////////////////////////
         lay_sign = findViewById(R.id.lay_sign);
         pDialog = new ProgressDialog(this);
         edtFullName = findViewById(R.id.edt_name);
@@ -85,6 +89,8 @@ public class ActivitySignUp extends AppCompatActivity implements Validator.Valid
             @Override
             public void onClick(View v) {
                 validator.validate();
+
+
             }
         });
         validator = new Validator(this);
